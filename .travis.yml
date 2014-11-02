@@ -23,6 +23,8 @@ before_install:
   - cd $BUILD_DIR
 install:
   - cpan-install ExtUtils::MakeMaker~6.68 --deps
+  - cat MYMETA.json
+  - cpanm --showdeps --with-develop --with-recommends .
 script:
   - perl ./tools/leap_seconds_header.pl
   - perl Build.PL
