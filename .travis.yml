@@ -6,7 +6,7 @@ env:
     - RELEASE_TESTING=1
     - AUTHOR_TESTING=1
 before_install:
-  - git clone git://github.com/haarg/perl-travis-helper ~/perl-travis-helper
+  - git clone --branch unconfigured-prereqs git://github.com/haarg/perl-travis-helper ~/perl-travis-helper
   - source ~/perl-travis-helper/init
   - build-perl
   - perl -V
